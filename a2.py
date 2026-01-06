@@ -12,7 +12,7 @@ driver.find_element(By.ID, "password").send_keys("SuperSecretPassword!")
 
 # xpath
 driver.find_element(By.XPATH, "//button[@type='submit']").click()
-time.sleep(2)
+time.sleep(5)
 
 # css
 message = driver.find_element(By.CSS_SELECTOR, "div.flash.success").text
@@ -22,7 +22,7 @@ print("login successful")
 
 # xpath
 driver.find_element(By.XPATH, "//a[@class='button secondary radius']").click()
-time.sleep(2)
+time.sleep(10)
 
 print("logout successful")
 

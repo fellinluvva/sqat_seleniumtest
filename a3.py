@@ -14,10 +14,10 @@ Select(driver.find_element(By.NAME, "fromPort")).select_by_visible_text("Portlan
 Select(driver.find_element(By.NAME, "toPort")).select_by_visible_text("Berlin")
 
 driver.find_element(By.CSS_SELECTOR, "input.btn-primary").click()
-time.sleep(2)
+time.sleep(5)
 
 driver.find_element(By.XPATH, "(//input[@type='submit'])[1]").click()
-time.sleep(2)
+time.sleep(5)
 
 driver.find_element(By.ID, "inputName").send_keys("Azamat Test")
 driver.find_element(By.ID, "address").send_keys("Test Street")

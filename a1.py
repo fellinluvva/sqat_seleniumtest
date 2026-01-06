@@ -12,7 +12,7 @@ search_box = driver.find_element(By.ID, "searchbox_input")
 search_box.send_keys("astanaituniversity")
 search_box.send_keys(Keys.RETURN)
 
-time.sleep(3)
+time.sleep(10)
 
 results = driver.find_elements(By.CSS_SELECTOR, "article[data-testid='result']")
 assert len(results) > 0
