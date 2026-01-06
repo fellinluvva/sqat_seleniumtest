@@ -71,6 +71,7 @@ if __name__ == "__main__":
         testRunner=HtmlTestRunner.HTMLTestRunner(
             output="reports",
             report_name="Amazon_Advanced_Selenium_Report",
-            combine_reports=True
+            combine_reports=True,
+            add_timestamp=True
         )
     )
