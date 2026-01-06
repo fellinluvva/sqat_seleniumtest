@@ -36,11 +36,11 @@ class AmazonAdvancedSeleniumTest(unittest.TestCase):
         # Step 2: Select class
         dropdown = driver.find_element(By.ID, "searchDropdownBox")
         Select(dropdown).select_by_visible_text("Electronics")
-        print("[STEP] Selected 'Electronics' category from dropdown")
+        print("\n[STEP] Selected 'Electronics' category from dropdown")
 
         # Step 3: Click search
         driver.find_element(By.ID, "nav-search-submit-button").click()
-        print("[STEP] Clicked search button")
+        print("\n[STEP] Clicked search button")
 
         # Step 4: Fluent wait
         fluent_wait = WebDriverWait(
@@ -52,13 +52,13 @@ class AmazonAdvancedSeleniumTest(unittest.TestCase):
             )
         )
         assert first_result.is_displayed()
-        print("[STEP] First search result loaded using fluent wait")
+        print("\n[STEP] First search result loaded using fluent wait")
 
         # Step 5: Action class (hover)
         actions = ActionChains(driver)
         account_menu = driver.find_element(By.ID, "nav-link-accountList")
         actions.move_to_element(account_menu).perform()
-        print("[STEP] Hovered over 'Account & Lists' using ActionChains")
+        print("\n[STEP] Hovered over 'Account & Lists' using ActionChains")
 
         time.sleep(2)
 
